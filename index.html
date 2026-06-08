@@ -54,9 +54,16 @@
 
   .logo-icon {
     width: 34px; height: 34px; border-radius: 10px;
-    background: var(--grad);
+    overflow: hidden;
     display: flex; align-items: center; justify-content: center;
-    font-size: 1rem;
+    background: var(--card);
+    border: 1px solid rgba(168,85,247,0.2);
+  }
+
+  .logo-icon img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
   }
 
   .hamburger {
@@ -146,7 +153,6 @@
 
   .btn-secondary:hover { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.15); }
 
-  /* ─── SCREENSHOTS SECTION ─── */
   .screenshots-section {
     padding: 48px 0 52px;
     overflow: hidden;
@@ -203,7 +209,6 @@
     border-radius: 20px;
   }
 
-  /* Shimmer loading placeholder */
   .screenshot-frame::before {
     content: '';
     position: absolute; inset: 0;
@@ -235,7 +240,6 @@
     background: var(--border);
   }
 
-  /* ─── FEATURES ─── */
   .features-section {
     padding: 48px 24px;
   }
@@ -372,7 +376,9 @@
 <!-- NAVBAR -->
 <nav>
   <a href="#" class="logo">
-    <div class="logo-icon"></div>
+    <div class="logo-icon">
+      <img src="https://raw.githubusercontent.com/Rakshittips/MRGram/refs/heads/main/assets/MRGram%20iocn.png" alt="MRGram Icon" onerror="this.style.display='none'" />
+    </div>
     MRGram
   </a>
   <button class="hamburger" aria-label="Menu">
@@ -450,7 +456,6 @@
   </div>
   
   <div class="feature-card fade-up delay-2">
-
     <h3>Enhanced Tools</h3>
     <p>Ad-free experience
 • View restricted channels
@@ -484,7 +489,8 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>Crafted with by <a href="https://rakshittips.vercel.app" target="_blank" style="color:#c084fc;text-decoration:none;font-weight:600;">Rakshittips.</a><br>2026 Mr_Rakshit_2.0 Made with by Rakshittips<br>
+  <p>Crafted with ❤️ by <a href="https://rakshittips.vercel.app" target="_blank" style="color:#c084fc;text-decoration:none;font-weight:600;">Rakshittips.</a><br>2026 Mr_Rakshit_2.0 Made with ❤️ by Rakshittips</p>
+</footer>
 
 </body>
 </html>
