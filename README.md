@@ -15,7 +15,7 @@ MRGram is a Telegram customization project focused on bringing an iPhone-inspire
 
 ## 🌐 Official Website
 
-https://mrgram.netlify.app
+https://rakshittips.github.io/MRGram/index.html
 
 ## 📥 Download
 
@@ -25,7 +25,7 @@ Visit the official website for the latest version and updates.
 
 **Rakshittips**
 
-- 🌍 Website: https://mrgram.netlify.app
+- 🌍 Website: [https://mrgram.netlify.app](https://rakshittips.github.io/MRGram/index.html)
 - 📢 Telegram: @Mr_Rakshit_2_0
 
 ---
