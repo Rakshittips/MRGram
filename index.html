@@ -645,93 +645,6 @@
     transition: width 0.3s ease;
   }
 
-  /* SCREENSHOTS CAROUSEL */
-  .screenshots-section {
-    padding: 56px 0 60px;
-    overflow: hidden;
-  }
-
-  .screenshots-scroll {
-    display: flex;
-    gap: 18px;
-    padding: 12px 24px 24px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .screenshots-scroll::-webkit-scrollbar { display: none; }
-
-  .screenshot-frame {
-    flex: 0 0 auto;
-    width: 220px;
-    scroll-snap-align: center;
-    border-radius: 22px;
-    overflow: hidden;
-    border: 1.5px solid rgba(168,85,247,0.3);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);
-    background: var(--card);
-    transition: transform 0.25s, box-shadow 0.25s;
-    position: relative;
-    cursor: pointer;
-  }
-
-  @media (min-width: 768px) {
-    .screenshot-frame { width: 240px; }
-  }
-
-  .screenshot-frame:hover {
-    transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 16px 48px rgba(168,85,247,0.35), 0 0 0 1px rgba(168,85,247,0.4);
-  }
-
-  .screenshot-frame img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 20px;
-  }
-
-  .screenshot-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(13,11,20,0.65);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    opacity: 0;
-    transition: opacity 0.2s;
-    color: #fff;
-    font-size: 0.85rem;
-    font-weight: 600;
-    backdrop-filter: blur(4px);
-  }
-
-  .screenshot-frame:hover .screenshot-overlay {
-    opacity: 1;
-  }
-
-  .scroll-hint {
-    text-align: center;
-    margin-top: 14px;
-    color: var(--muted);
-    font-size: 0.78rem;
-    letter-spacing: 0.04em;
-    display: flex; align-items: center; justify-content: center; gap: 8px;
-  }
-
-  .scroll-hint::before,
-  .scroll-hint::after {
-    content: '';
-    width: 24px; height: 1px;
-    background: var(--border);
-  }
-
   /* FEATURES LIST (ORIGINAL CARDS RESTYLED) */
   .features-section {
     padding: 56px 24px;
@@ -993,84 +906,6 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-  }
-
-  /* SCREENSHOT LIGHTBOX MODAL */
-  .lightbox-backdrop {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.92);
-    backdrop-filter: blur(12px);
-    z-index: 2500;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.25s ease;
-  }
-
-  .lightbox-backdrop.open {
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  .lightbox-close {
-    position: absolute;
-    top: 20px; right: 20px;
-    background: rgba(255,255,255,0.1);
-    border: none;
-    color: #fff;
-    width: 44px; height: 44px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1.3rem;
-    display: flex; align-items: center; justify-content: center;
-  }
-
-  .lightbox-img-wrap {
-    max-width: 90vw;
-    max-height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .lightbox-img-wrap img {
-    max-width: 100%;
-    max-height: 75vh;
-    object-fit: contain;
-    border-radius: 18px;
-    border: 2px solid rgba(168,85,247,0.4);
-    box-shadow: 0 10px 40px rgba(0,0,0,0.8);
-  }
-
-  .lightbox-caption {
-    margin-top: 14px;
-    color: #e8e0f5;
-    font-size: 0.92rem;
-    font-weight: 600;
-    text-align: center;
-  }
-
-  .lightbox-nav {
-    display: flex;
-    gap: 16px;
-    margin-top: 12px;
-  }
-
-  .lightbox-btn {
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.15);
-    color: #fff;
-    padding: 8px 18px;
-    border-radius: 100px;
-    cursor: pointer;
-    font-family: inherit;
-    font-size: 0.85rem;
-    font-weight: 600;
   }
 
   /* TOAST NOTIFICATION */
@@ -1405,7 +1240,6 @@
       <li><a href="#hero">Home</a></li>
       <li><a href="#downloads">Download Center</a></li>
       <li><a href="#tools">iOS Tools</a></li>
-      <li><a href="#screenshots">Screenshots</a></li>
       <li><a href="#features">Features</a></li>
       <li><a href="#community">Community</a></li>
     </ul>
@@ -1426,7 +1260,6 @@
   <a href="#hero" class="drawer-link">Home <span>→</span></a>
   <a href="#downloads" class="drawer-link" style="color: #38bdf8;">Download Center <span>↓</span></a>
   <a href="#tools" class="drawer-link">Interactive Tools <span>→</span></a>
-  <a href="#screenshots" class="drawer-link">Screenshots Gallery <span>→</span></a>
   <a href="#features" class="drawer-link">Feature List <span>→</span></a>
   <a href="#community" class="drawer-link">Telegram Channel <span>→</span></a>
   <a href="#downloads" class="drawer-link" style="color: #c084fc;">Download Packages <span>↓</span></a>
@@ -1768,52 +1601,6 @@
 
 <div class="divider"></div>
 
-<!-- SCREENSHOTS -->
-<section class="screenshots-section" id="screenshots">
-  <div class="section-header">
-    <span class="section-tag">Visual Showcase</span>
-    <h2 class="section-title">See It In Action</h2>
-    <p class="section-subtitle">Real screenshots from Android devices running MRGram iOS-style client.</p>
-  </div>
-
-  <div class="screenshots-scroll" id="screenshots-scroll">
-    <div class="screenshot-frame" data-img="assets/MRGram1.png" data-title="iOS Home & Chat Interface" data-desc="Authentic iOS blur tabs, top search bar, and contact avatars">
-      <img src="assets/MRGram1.png" onerror="this.src='https://raw.githubusercontent.com/Rakshittips/MRGram/refs/heads/main/assets/MRGram1.png'" alt="MRGram Screenshot 1" loading="lazy" />
-      <div class="screenshot-overlay">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-        <span>View Full Size</span>
-      </div>
-    </div>
-
-    <div class="screenshot-frame" data-img="assets/MRGram2.png" data-title="iOS Telegram Settings & Mod Menu" data-desc="Ghost mode toggles, anti-delete configuration, and UI customizer">
-      <img src="assets/MRGram2.png" onerror="this.src='https://raw.githubusercontent.com/Rakshittips/MRGram/refs/heads/main/assets/MRGram2.png'" alt="MRGram Screenshot 2" loading="lazy" />
-      <div class="screenshot-overlay">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-        <span>View Full Size</span>
-      </div>
-    </div>
-
-    <div class="screenshot-frame" data-img="assets/MRGram3.png" data-title="iOS Chat Conversation & Emojis" data-desc="Bubble curvature, Apple 3D emojis, voice wave player, and media cards">
-      <img src="assets/MRGram3.png" onerror="this.src='https://raw.githubusercontent.com/Rakshittips/MRGram/refs/heads/main/assets/MRGram3.png'" alt="MRGram Screenshot 3" loading="lazy" />
-      <div class="screenshot-overlay">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-        <span>View Full Size</span>
-      </div>
-    </div>
-
-    <div class="screenshot-frame" data-img="assets/MRGram4.png" data-title="Media Saver & Story Downloader" data-desc="One-tap save for expiring media, secret chats, and channel stories">
-      <img src="assets/MRGram4.png" onerror="this.src='https://raw.githubusercontent.com/Rakshittips/MRGram/refs/heads/main/assets/MRGram4.png'" alt="MRGram Screenshot 4" loading="lazy" />
-      <div class="screenshot-overlay">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-        <span>View Full Size</span>
-      </div>
-    </div>
-  </div>
-  <div class="scroll-hint">swipe or click on any screenshot to view in full screen</div>
-</section>
-
-<div class="divider"></div>
-
 <!-- FEATURES -->
 <section class="features-section" id="features">
   <div class="section-header">
@@ -1936,19 +1723,6 @@
         Update Now
       </a>
     </div>
-  </div>
-</div>
-
-<!-- FULLSCREEN SCREENSHOT LIGHTBOX -->
-<div class="lightbox-backdrop" id="lightbox-modal" aria-hidden="true" role="dialog">
-  <button class="lightbox-close" id="lightbox-close" aria-label="Close Preview">✕</button>
-  <div class="lightbox-img-wrap">
-    <img src="" id="lightbox-img" alt="Preview" />
-  </div>
-  <div class="lightbox-caption" id="lightbox-caption"></div>
-  <div class="lightbox-nav">
-    <button class="lightbox-btn" id="lightbox-prev">← Previous</button>
-    <button class="lightbox-btn" id="lightbox-next">Next →</button>
   </div>
 </div>
 
@@ -2159,63 +1933,6 @@
           }, 300);
         }
       }, 150);
-    });
-
-    // 9. Fullscreen Screenshot Lightbox Modal
-    const screenshotFrames = document.querySelectorAll('.screenshot-frame');
-    const lightboxModal = document.getElementById('lightbox-modal');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const lightboxCaption = document.getElementById('lightbox-caption');
-    const lightboxClose = document.getElementById('lightbox-close');
-    const lightboxPrev = document.getElementById('lightbox-prev');
-    const lightboxNext = document.getElementById('lightbox-next');
-
-    let currentScreenshotIndex = 0;
-    const screenshotData = Array.from(screenshotFrames).map(frame => ({
-      img: frame.getAttribute('data-img'),
-      title: frame.getAttribute('data-title'),
-      desc: frame.getAttribute('data-desc')
-    }));
-
-    function openLightbox(index) {
-      currentScreenshotIndex = index;
-      const item = screenshotData[currentScreenshotIndex];
-      lightboxImg.src = item.img;
-      lightboxCaption.innerHTML = `<strong>${item.title}</strong> — ${item.desc}`;
-      lightboxModal.classList.add('open');
-    }
-
-    screenshotFrames.forEach((frame, idx) => {
-      frame.addEventListener('click', () => openLightbox(idx));
-    });
-
-    lightboxClose.addEventListener('click', () => {
-      lightboxModal.classList.remove('open');
-    });
-
-    lightboxPrev.addEventListener('click', (e) => {
-      e.stopPropagation();
-      currentScreenshotIndex = (currentScreenshotIndex - 1 + screenshotData.length) % screenshotData.length;
-      openLightbox(currentScreenshotIndex);
-    });
-
-    lightboxNext.addEventListener('click', (e) => {
-      e.stopPropagation();
-      currentScreenshotIndex = (currentScreenshotIndex + 1) % screenshotData.length;
-      openLightbox(currentScreenshotIndex);
-    });
-
-    lightboxModal.addEventListener('click', (e) => {
-      if (e.target === lightboxModal) {
-        lightboxModal.classList.remove('open');
-      }
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (!lightboxModal.classList.contains('open')) return;
-      if (e.key === 'Escape') lightboxModal.classList.remove('open');
-      if (e.key === 'ArrowLeft') lightboxPrev.click();
-      if (e.key === 'ArrowRight') lightboxNext.click();
     });
 
     // 8. Download Center Filter Tabs
