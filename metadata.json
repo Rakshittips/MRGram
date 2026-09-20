@@ -1,0 +1,6 @@
+{
+  "name": "MRGram",
+  "description": "iOS-Style Telegram for Android",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
